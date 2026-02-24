@@ -83,7 +83,7 @@ Use this for **brand-wide colours and spacing**. The app uses CSS variables; Tai
 - **`--sidebar-*`** — Sidebar background, text, active state, border (e.g. `--sidebar-accent` for the active “Home” item).
 - **`--radius`** — Default border radius (buttons, cards, inputs). Other radii are derived from it (`--radius-sm`, `--radius-lg`, etc.).
 
-Values are in **OKLCH**. Use an OKLCH-capable colour picker or convert from HEX/HSL and paste into `globals.css`. After changing variables, save and the dev server will hot-reload.
+All colours use **HEX** (e.g. `#343434`, `#fafafa`) so you can copy values from Figma and paste them into `globals.css`. After changing variables, save and the dev server will hot-reload.
 
 ### 2. Tailwind classes on components
 

@@ -6,14 +6,8 @@ import {
   CreditCard,
   List,
   ArrowLeftRight,
-  Calendar,
-  RefreshCw,
-  Repeat,
-  FileUp,
-  SplitSquareVertical,
   Users,
   BarChart3,
-  ChevronDown,
 } from "lucide-react"
 import {
   Sidebar,
@@ -23,19 +17,11 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-  SidebarMenuSub,
-  SidebarMenuSubButton,
-  SidebarMenuSubItem,
 } from "@/components/ui/sidebar"
-import {
-  Collapsible,
-  CollapsibleContent,
-  CollapsibleTrigger,
-} from "@/components/ui/collapsible"
 
 /**
  * DESIGNER NOTE: Wise-style app sidebar (left navigation)
- * — Nav items match the Wise dashboard: Home, Cards, Transactions, Payments (expandable), Bill splits, Recipients, Insights
+ * — Flat list only: Home, Cards, Transactions, Payments, Recipients, Insights (no sub-navigation).
  * — To restyle: edit className on Sidebar, or override --sidebar-* in globals.css
  */
 export function AppSidebar() {
@@ -70,59 +56,10 @@ export function AppSidebar() {
                 </SidebarMenuButton>
               </SidebarMenuItem>
               <SidebarMenuItem>
-                <Collapsible defaultOpen className="group/collapsible">
-                  <CollapsibleTrigger asChild>
-                    <SidebarMenuButton className="flex w-full items-center justify-between">
-                      <span className="flex items-center gap-3">
-                        <ArrowLeftRight className="size-4" />
-                        <span>Payments</span>
-                      </span>
-                      <ChevronDown className="ml-auto size-4 transition-transform group-data-[state=open]/collapsible:rotate-180" />
-                    </SidebarMenuButton>
-                  </CollapsibleTrigger>
-                  <CollapsibleContent>
-                    <SidebarMenuSub>
-                      <SidebarMenuSubItem>
-                        <SidebarMenuSubButton asChild>
-                          <Link href="/" className="flex items-center gap-2">
-                            <Calendar className="size-4" />
-                            <span>Scheduled</span>
-                          </Link>
-                        </SidebarMenuSubButton>
-                      </SidebarMenuSubItem>
-                      <SidebarMenuSubItem>
-                        <SidebarMenuSubButton asChild>
-                          <Link href="/" className="flex items-center gap-2">
-                            <RefreshCw className="size-4" />
-                            <span>Direct Debits</span>
-                          </Link>
-                        </SidebarMenuSubButton>
-                      </SidebarMenuSubItem>
-                      <SidebarMenuSubItem>
-                        <SidebarMenuSubButton asChild>
-                          <Link href="/" className="flex items-center gap-2">
-                            <Repeat className="size-4" />
-                            <span>Recurring card payments</span>
-                          </Link>
-                        </SidebarMenuSubButton>
-                      </SidebarMenuSubItem>
-                      <SidebarMenuSubItem>
-                        <SidebarMenuSubButton asChild>
-                          <Link href="/" className="flex items-center gap-2">
-                            <FileUp className="size-4" />
-                            <span>Payment requests</span>
-                          </Link>
-                        </SidebarMenuSubButton>
-                      </SidebarMenuSubItem>
-                    </SidebarMenuSub>
-                  </CollapsibleContent>
-                </Collapsible>
-              </SidebarMenuItem>
-              <SidebarMenuItem>
                 <SidebarMenuButton asChild>
                   <Link href="/" className="flex items-center gap-3">
-                    <SplitSquareVertical className="size-4" />
-                    <span>Bill splits</span>
+                    <ArrowLeftRight className="size-4" />
+                    <span>Payments</span>
                   </Link>
                 </SidebarMenuButton>
               </SidebarMenuItem>
