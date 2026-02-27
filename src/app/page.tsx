@@ -44,17 +44,17 @@ export default function Home() {
       {/* Total balance + actions */}
       <section className="space-y-4">
         <h2 className="text-sm font-medium text-muted-foreground">Total balance</h2>
-        <p className="text-3xl font-bold tracking-tight">1.00 EUR</p>
+        <p className="text-3xl font-bold tracking-tight">4.00 EUR</p>
         <div className="flex flex-wrap gap-2">
           <Button size="sm" className="bg-primary text-primary-foreground hover:bg-primary/90">
-            Send
+            Send money
           </Button>
-          <Button size="sm" className="bg-primary text-primary-foreground hover:bg-primary/90">
+          <Button size="sm" variant="secondary" className="bg-green-100 hover:bg-green-100/80">
             Add money
           </Button>
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button size="sm" variant="outline" className="gap-1">
+              <Button size="sm" variant="secondary" className="gap-1 bg-green-100 hover:bg-green-100/80">
                 Request
                 <ChevronDown className="size-4" />
               </Button>
@@ -97,7 +97,7 @@ export default function Home() {
         <ul className="divide-y divide-border rounded-lg border bg-card">
           {RECENT_TRANSACTIONS.map((tx) => (
             <li key={tx.id} className="flex items-center gap-4 px-4 py-3">
-              <div className="flex size-10 shrink-0 items-center justify-center rounded-full bg-muted">
+              <div className="flex size-10 shrink-0 items-center justify-center rounded-full bg-grey-200">
                 <tx.icon className="size-5 text-muted-foreground" />
               </div>
               <div className="min-w-0 flex-1">

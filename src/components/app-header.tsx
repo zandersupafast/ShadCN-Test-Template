@@ -35,13 +35,13 @@ export function AppHeader() {
           <DropdownMenuTrigger asChild>
             <Button variant="ghost" className="flex items-center gap-2">
               <Avatar className="size-8">
-                <AvatarImage src="" alt="Carolina Fernandes" />
+                <AvatarImage src="" alt="Anastasia Pokatilova" />
                 <AvatarFallback className="bg-muted text-muted-foreground text-xs">
-                  CF
+                  AP
                 </AvatarFallback>
               </Avatar>
               <span className="hidden text-sm font-medium sm:inline-block">
-                Carolina Fernandes
+                Anastasia Pokatilova
               </span>
               <ChevronRight className="size-4 text-muted-foreground" />
             </Button>
